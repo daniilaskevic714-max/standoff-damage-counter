@@ -1,0 +1,51 @@
+.body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+    100% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #00ffcc;
+    border: none;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.toggle-button:hover {
+    background-color: #00cc99;
+}
